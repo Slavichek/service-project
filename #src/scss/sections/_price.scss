@@ -1,0 +1,58 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.section {
+	&-price {
+		padding: rem-calc(230 0 170);
+		background: url("../assets/images/bg/bg_price.png")  top center no-repeat;
+		background-size: cover;
+		@include max-screen($widescreen) {
+			padding: rem-calc(170 0 80);
+		}
+	}
+}
+.price {
+	&__card {
+		width: 50%;
+		margin: 0 auto;
+		@include max-screen($mobile) {
+			width: 100%;
+		}
+		span {
+			display: block;
+		}
+	}
+	&__header {
+		margin-bottom: rem-calc(15);
+	}
+	&__txt {
+		margin-bottom: rem-calc(50);
+	}
+	&__cost {
+		@include em-font-size(50);
+		color: #222F65;
+		font-weight: $medium;
+		margin-bottom: rem-calc(10);
+	}
+	&__info {
+		@include em-font-size(14);
+		color: #5D6970;
+		margin-bottom: rem-calc(10);
+	}
+	&__description {
+		color: #37447E;
+	}
+	&__content {
+		margin-bottom: rem-calc(65);
+	}
+	
+}

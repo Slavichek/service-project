@@ -1,0 +1,43 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+
+.service {
+	&__card {
+		padding: rem-calc(100 0);
+		@include max-screen($widescreen) {
+			padding: rem-calc(60 0);
+		}
+		@media (max-width: $tablet) {
+			@include flex-direction(column);
+		}
+	}
+	&-info {
+		&__wrapper {
+			width: calc(50% - 120px);
+			@media (max-width: $tablet) {
+				width: 100%;
+				margin: rem-calc(30 0);
+			}
+		}
+		&__header {
+			margin-bottom: rem-calc(30);
+		}
+	}
+	&-img {
+		&__wrapper {
+			@media (max-width: $tablet) {
+				margin: 0 auto;
+			}
+		}
+	}
+}

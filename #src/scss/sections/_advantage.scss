@@ -1,0 +1,63 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.section {
+	&-advantage {
+		padding: rem-calc(130 0 100);
+		@media (max-width: $tablet) {
+			padding: rem-calc(60 0);
+		}
+	}
+}
+.advantage {
+	&__container {
+		@media (max-width: $tablet) {
+			@include flex-direction(column);
+		}
+	}
+	&-img {
+		&__wrapper {
+			img {
+				margin: 20px auto;
+			}
+		}
+	}
+	&-info {
+		&__wrapper {
+			width: calc(50% - 10px);
+			@media (max-width: $tablet) {
+				width: 100%;
+			}
+		}
+		&__header {
+			margin-bottom: rem-calc(25);
+		}
+		&__content {
+			margin-bottom: rem-calc(80);
+		}
+	}
+	&-article {
+		&:nth-child(2n) {
+			padding-left: rem-calc(20);
+		}
+		&__img {
+			margin-bottom: rem-calc(15);;
+		}
+		&__title {
+			margin-bottom: rem-calc(10);;
+		}
+		&__txt {
+			color: $grey_txt_color;
+			@include em-font-size(12);
+		}
+	}
+}
